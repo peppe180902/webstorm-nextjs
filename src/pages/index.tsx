@@ -4,6 +4,8 @@ import React, { useCallback, useMemo, useState } from "react";
 import { Box, Button, Container, Stack, ThemeProvider } from "@mui/material";
 import theme from "@/themes";
 import Drawer from "@/components/componentsProva/Drawer";
+import { SignupForm } from "@/components/SignupForm";
+import { LoginForm } from "@/components/LoginForm";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -84,7 +86,10 @@ export default function Home() {
           </Box>
           <Drawer />
         </Stack>
-        <Container></Container>
+        <Container maxWidth="md">
+          <SignupForm />
+          {/*<LoginForm />*/}
+        </Container>
       </ThemeProvider>
     </>
   );
