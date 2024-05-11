@@ -7,6 +7,7 @@ import {
   DashboardScene,
   LoginScene,
   ProdottiScene,
+  ProductDetailsScene,
   UtentiScene,
 } from "@/spas/admin-panel/scenes";
 
@@ -23,6 +24,10 @@ const App: React.FC = () => {
           <Route path="/dashboard" element={<DashboardScene />}>
             <Route path="users" element={<UtentiScene />} />
             <Route path="products" element={<ProdottiScene />} />
+            <Route
+              path="products/:productId"
+              element={<ProductDetailsScene />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
